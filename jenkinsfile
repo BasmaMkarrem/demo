@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from Git repository
+                git 'https://github.com/username/repository.git'
+            }
+        }
+
+        // Add more stages as needed
+        // Example:
+        // stage('Build') {
+        //     steps {
+        //         sh 'mvn clean package'
+        //     }
+        // }
+    }
+}
